@@ -101,7 +101,7 @@ public class RakClientOnlineInitialHandler extends SimpleChannelInboundHandler<E
         buf.readUnsignedShort(); // System index
 
         // Address + 2 * Long - Minimum amount of data
-        int required = IPV4_MESSAGE_SIZE + 16;
+        int required = 29 + 16;
 
         long pingTime = 0;
         while (buf.isReadable(required)) {
